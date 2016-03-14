@@ -1,0 +1,6 @@
+\\fs2\11341061\Desktop\Project\ProjectFT\ProjectFT\bin\ProjectFT.dll.config
+\\fs2\11341061\Desktop\Project\ProjectFT\ProjectFT\bin\ProjectFT.dll
+\\fs2\11341061\Desktop\Project\ProjectFT\ProjectFT\bin\ProjectFT.pdb
+\\fs2\11341061\Desktop\Project\ProjectFT\ProjectFT\obj\Debug\ProjectFT.csprojResolveAssemblyReference.cache
+\\fs2\11341061\Desktop\Project\ProjectFT\ProjectFT\obj\Debug\ProjectFT.dll
+\\fs2\11341061\Desktop\Project\ProjectFT\ProjectFT\obj\Debug\ProjectFT.pdb

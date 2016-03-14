@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Form Page";
+ }
+<div class="jumbotron">
+    <h1>Welcome to the Lost & Found.</h1>
+    <p class="lead">If you have found something just submit the information in the form below and user's can log on and search through the listings! Please leave a prefered choice of contact information below to allow other users contact you about their goods.</p>
+    
+</div>
+<body>
+    <section id="main">
+
+        <h2>Authentication</h2>
+        <p> Remember, items can not be returned to owners unless they can prove that the item is theirs. For example, if you've lost your wallet, be able to account for something that is inside of it like your id, or a defining feature of the wallet. We want items to be returned to their rightful owners. </p>
+               
+      
+
+    
+    <h3>Post Here</h3>
+
+
+  
+        <form name="Post Your Findings" method="POST" action="Posts.aspx">
+            <h3>Please fill out this form to post information about items you have found:</h3>
+            <p>
+                <table>
+                    <tr>
+                        <td>Name (required)</td>
+                        <td><input type="TEXT" name="name" value="" size="20" maxlength="150"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail (required)</td>
+                        <td><input type="TEXT" name="email" value="" size="25" maxlength="150"></td>
+                    </tr>
+                    <tr>
+                        <td>Contact No. (required)</td>
+                        <td><input type="TEXT" name="Contact No" value="" size="25" maxlength="150"></td>
+                    </tr>
+                    <tr>
+                        <td>Item Name</td>
+                        <td><input type="TEXT" name="Item name:" value="" size="25" maxlength="150"></td>
+                    </tr>
+                    <tr>
+                        <td>Item Description</td>
+                        <td><input type="text" name="Item Description" value="" size="1000" maxlength="1000"></td>
+                    </tr>
+                </table>
+            </p>
+            <p>
+                Have you lost something or found something?<br>
+                <input type="CHECKBOX" name="info" value="Found Item">Found Item<br>
+                <input type="CHECKBOX" name="info" value="Lost Item">Lost Item <br>
+            </p>
+            <p>
+                <input type="SUBMIT" value="Submit">
+                <input type="RESET" value="Clear Form">
+            </p>
+        </form>
+        
+    </section>
+   
+    </body>
+
+
+
+
+
+

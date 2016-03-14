@@ -1,0 +1,6 @@
+\\fs2\11341061\Desktop\Project\ConnectingtoSQL\ConnectingtoSQL\bin\Debug\ConnectingtoSQL.exe.config
+\\fs2\11341061\Desktop\Project\ConnectingtoSQL\ConnectingtoSQL\bin\Debug\ConnectingtoSQL.exe
+\\fs2\11341061\Desktop\Project\ConnectingtoSQL\ConnectingtoSQL\bin\Debug\ConnectingtoSQL.pdb
+\\fs2\11341061\Desktop\Project\ConnectingtoSQL\ConnectingtoSQL\obj\Debug\ConnectingtoSQL.csprojResolveAssemblyReference.cache
+\\fs2\11341061\Desktop\Project\ConnectingtoSQL\ConnectingtoSQL\obj\Debug\ConnectingtoSQL.exe
+\\fs2\11341061\Desktop\Project\ConnectingtoSQL\ConnectingtoSQL\obj\Debug\ConnectingtoSQL.pdb

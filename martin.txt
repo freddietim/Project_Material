@@ -1,0 +1,29 @@
+HTML, CSS, PHP, SQL (Netbeans)
+
+Loser
+Finder
+
+Loser logs on and submits an lost claim
+Finder
+
+Most basic
+No user accounts
+1 Table for the lost items
+
+Timeline for lost items
+Table for storing the lost items
+A form for submitting
+
+Edit, Delete
+
+
+
+
+id auto
+itemName
+itemDescription
+locationFound
+dateFound
+
+
+Form 
