@@ -28,9 +28,9 @@ namespace PFT.DAL
                 new Item{ItemID=1020, ItemType="Wallet", ItemDesc="Browm leather wallet"},
                 new Item{ItemID=1030, ItemType="Clothing", ItemDesc="Red Fleece"},
                 new Item{ItemID=1040, ItemType="Jewellery", ItemDesc="Silver bracelet"},
-                new Item{ItemID=1050, ItemType="Car Keys", ItemDesc="Nissan car keys"},
-           
+                new Item{ItemID=1050, ItemType="Car Keys", ItemDesc="Nissan car keys"},           
             };
+
             items.ForEach(s => context.Items.Add(s));
             context.SaveChanges();
             var emailadd = new List<Email>

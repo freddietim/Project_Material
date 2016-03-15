@@ -81,7 +81,7 @@ namespace PFT.Migrations
             {
                 var emailInDataBase = context.EmailAdd.Where(
                     s => 
-                        s.User.ID == e.UserID &&
+                        s.User.ID == e.User.ID &&
                          s.Item.ItemID == e.Item.ItemID).SingleOrDefault();
                 if (emailInDataBase == null)
                 {

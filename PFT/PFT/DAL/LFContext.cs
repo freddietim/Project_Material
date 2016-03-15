@@ -13,8 +13,8 @@ namespace PFT.DAL
         public LFContext() : base("LFContext")
         {
         }
-        public DbSet<User> Users {get; set; }
-        public DbSet<Email> EmailAdd {get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Email> EmailAdd { get; set; }
         public DbSet<Item> Items { get; set;}
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -22,5 +22,4 @@ namespace PFT.DAL
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }
-    
-    }
+}

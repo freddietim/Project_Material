@@ -30,22 +30,22 @@
         <th></th>
     </tr>
 
-@foreach (var user in Model) {
+@foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => user.FirstName)
+            @Html.DisplayFor(modelItem => item.FirstName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => user.LastName)
+            @Html.DisplayFor(modelItem => item.LastName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => user.EmailAddress)
+            @Html.DisplayFor(modelItem => item.EmailAddress)
         </td>
         <td>
             
-            @Html.ActionLink("Edit", "Edit", new { id=user.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=user.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=user.ID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
     </tr>
 

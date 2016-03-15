@@ -1,34 +1,21 @@
 ﻿@model IEnumerable<PFT.Models.Item>
 
 @{
-    ViewBag.Title = "Items";
+    ViewBag.Title = "Index";
 }
-<div class="jumbotron">
-<h1>Items</h1>
+
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@using (Html.BeginForm())
-{
-    <p>
-        Find by title: @Html.TextBox("SearchString")
-        <input type="submit" value="Search" />
-    </p>
-}
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ItemID)
+            @Html.DisplayNameFor(model => model.ItemType)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            User
+            @Html.DisplayNameFor(model => model.ItemDesc)
         </th>
         <th></th>
     </tr>
@@ -36,13 +23,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ItemID)
+            @Html.DisplayFor(modelItem => item.ItemType)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
+            @Html.DisplayFor(modelItem => item.ItemDesc)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ItemID }) |
@@ -53,4 +37,3 @@
 }
 
 </table>
-</div>

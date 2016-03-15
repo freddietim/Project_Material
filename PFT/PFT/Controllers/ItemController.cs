@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -16,36 +16,13 @@ namespace PFT.Controllers
         private LFContext db = new LFContext();
 
         // GET: Item
-           public ViewResult Index()
+        public ViewResult Index()
         {
             return View(db.Items.ToList());
         }
-      /*  public ActionResult Index(string sortOrder, string searchString)
-        {
-            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-           // var items1 = db.Items.Include(i => i.User);
-            var items = from s in db.Items
-                        select s;
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                items = items.Where(s => s.Title.Contains(searchString));
-                                                
-            }
-            switch (sortOrder)
-            {
-                case "name_desc":
-                    items = items.OrderByDescending(s => s.Title);
-                    break;
-                default:
-                    items = items.OrderBy(s => s.Title);
-                    break;
-            }
-            
-            return View(items.ToList());
-        }*/
 
         // GET: Item/Details/5
-      /*  public ActionResult Details(int? id)
+        public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -64,29 +41,23 @@ namespace PFT.Controllers
         {
             return View();
         }
+        
 
         // POST: Item/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ItemID,Title,Description,Location")] Item item)
+        public ActionResult Create([Bind(Include = "ItemID,ItemType,ItemDesc")] Item item)
         {
-            //try
-            //{
-                if (ModelState.IsValid)
-                {
-                    db.Items.Add(item);
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
-                }
-            //}
-            /*catch (DataException)
+            if (ModelState.IsValid)
             {
-                ModelState.AddModelError("", "Unable to save changes.");
-            }*/
+                db.Items.Add(item);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
 
-      /*      return View(item);
+            return View(item);
         }
 
         // GET: Item/Edit/5
@@ -109,7 +80,7 @@ namespace PFT.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ItemID,Title,Desc")] Item item)
+        public ActionResult Edit([Bind(Include = "ItemID,ItemType,ItemDesc")] Item item)
         {
             if (ModelState.IsValid)
             {
@@ -155,4 +126,4 @@ namespace PFT.Controllers
             base.Dispose(disposing);
         }
     }
-}*/
+}

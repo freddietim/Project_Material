@@ -3,7 +3,6 @@
 @{
     ViewBag.Title = "Details";
 }
-<div class="jumbotron">
 
 <h2>Details</h2>
 
@@ -12,40 +11,24 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(model => model.ItemType)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Title)
+            @Html.DisplayFor(model => model.ItemType)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Description)
+            @Html.DisplayNameFor(model => model.ItemDesc)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Description)
+            @Html.DisplayFor(model => model.ItemDesc)
         </dd>
-        <dd>
-            <table class="table">
-                <tr>
-                    <th>Item Title</th>
-                    <th>Description</th>
-                </tr>
-                @foreach (var item in Model.Enrollments)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Item.Title)
-                        </td>
-                    </tr>
-                }
-            </table>
-        </dd>
+
     </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ItemID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
-</div>
