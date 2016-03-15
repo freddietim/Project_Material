@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -45,7 +45,7 @@ namespace PFT.Controllers
         }*/
 
         // GET: Item/Details/5
-        public ActionResult Details(int? id)
+      /*  public ActionResult Details(int? id)
         {
             if (id == null)
             {
@@ -86,7 +86,7 @@ namespace PFT.Controllers
                 ModelState.AddModelError("", "Unable to save changes.");
             }*/
 
-            return View(item);
+      /*      return View(item);
         }
 
         // GET: Item/Edit/5
@@ -155,4 +155,4 @@ namespace PFT.Controllers
             base.Dispose(disposing);
         }
     }
-}
+}*/

@@ -10,11 +10,11 @@ namespace PFT.DAL
 {
     public class LFContext : DbContext{
 
-        public LFContext() : base("LFContext"){
-
+        public LFContext() : base("LFContext")
+        {
         }
         public DbSet<User> Users {get; set; }
-        public DbSet<Enrollment> Enrollments {get; set; }
+        public DbSet<Email> EmailAdd {get; set; }
         public DbSet<Item> Items { get; set;}
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

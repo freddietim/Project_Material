@@ -13,116 +13,83 @@ namespace PFT.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "PFT.DAL.LFContext";
+            //ContextKey = "PFT.DAL.LFContext";
         }
 
         protected override void Seed(PFT.DAL.LFContext context)
         {
-            var students = new List<User>
+            var users = new List<User>
             {
-                new User { FirstName = "Carson",   LastName = "Alexander", 
-                    EnrollmentDate = DateTime.Parse("2010-09-01") },
-                new User { FirstName = "Meredith", LastName = "Alonso",    
-                    EnrollmentDate = DateTime.Parse("2012-09-01") },
-                new User { FirstName = "Arturo",   LastName = "Anand",     
-                    EnrollmentDate = DateTime.Parse("2013-09-01") },
-                new User { FirstName = "Gytis",    LastName = "Barzdukas", 
-                    EnrollmentDate = DateTime.Parse("2012-09-01") },
-                new User { FirstName = "Yan",      LastName = "Li",        
-                    EnrollmentDate = DateTime.Parse("2012-09-01") },
-                new User { FirstName = "Peggy",    LastName = "Justice",   
-                    EnrollmentDate = DateTime.Parse("2011-09-01") },
-                new User { FirstName = "Laura",    LastName = "Norman",    
-                    EnrollmentDate = DateTime.Parse("2013-09-01") },
-                new User { FirstName = "Nino",     LastName = "Olivetto",  
-                    EnrollmentDate = DateTime.Parse("2005-08-11") }
+                new User { FirstName = "Freddie",   LastName = "Timmins", 
+                    EmailAddress = "freddie_timmins@hotmail.com" },
+                new User { FirstName = "Colm", LastName = "Quish",    
+                    EmailAddress = "squishdquish@gmail.com" },
+                new User { FirstName = "JD",   LastName = "Kiely",     
+                    EmailAddress = "jd2dk@hotmail.com" },
+                new User { FirstName = "Ulrich",    LastName = "Lunde", 
+                    EmailAddress = "ullylully@gmail.com" },
+                new User { FirstName = "Jen",      LastName = "Bain",        
+                    EmailAddress = "theBain@yahoo.co.uk" },
+            
             };
-            students.ForEach(s => context.Users.AddOrUpdate(p => p.LastName, s));
+            users.ForEach(s => context.Users.AddOrUpdate(p => p.LastName, s));
             context.SaveChanges();
 
-            var courses = new List<Item>
+            var items = new List<Item>
             {
-                new Item {ItemID = 1050, Title = "Chemistry",      Description = "phone", },
-                new Item {ItemID = 4022, Title = "Microeconomics", Description = "Bag", },
-                new Item {ItemID = 4041, Title = "Macroeconomics", Description = "Purse", },
-                new Item {ItemID = 1045, Title = "Calculus",       Description = "Ring", },
-                new Item {ItemID = 3141, Title = "Trigonometry",   Description = "Scarf", },
-                new Item {ItemID = 2021, Title = "Composition",    Description = "Car Keys", },
-                new Item {ItemID = 2042, Title = "Literature",     Description = "Study Notes", }
+                new Item {ItemID = 1050, ItemType = "Phone",      ItemDesc = "Black iPhone 4s", },
+                new Item {ItemID = 4022, ItemType = "Wallet", ItemDesc = "Brown leather wallet", },
+                new Item {ItemID = 4041, ItemType = "Clothing", ItemDesc = "Red jumper", },
+                new Item {ItemID = 1045, ItemType = "Jewellery",       ItemDesc = "silver tennis bracelet", },
+                new Item {ItemID = 3141, ItemType = "Car Keys",   ItemDesc = "nissan car keys", },
+            
             };
-            courses.ForEach(s => context.Items.AddOrUpdate(p => p.Title, s));
+            items.ForEach(s => context.Items.AddOrUpdate(p => p.ItemType, s));
             context.SaveChanges();
 
-            var enrollments = new List<Enrollment>
+            var emailadd = new List<Email>
             {
-                new Enrollment { 
-                    UserID = students.Single(s => s.LastName == "Alexander").ID, 
-                    ItemID = courses.Single(c => c.Title == "Chemistry" ).ItemID, 
-                     
+                new Email { 
+                    UserID = users.Single(s => s.LastName == "Timmins").ID, 
+                    ItemID = items.Single(c => c.ItemType == "Phone" ).ItemID, 
+                    
                 },
-                 new Enrollment { 
-                    UserID = students.Single(s => s.LastName == "Alexander").ID,
-                    ItemID = courses.Single(c => c.Title == "Microeconomics" ).ItemID, 
-                   
+                 new Email { 
+                    UserID = users.Single(s => s.LastName == "Quish").ID,
+                    ItemID = items.Single(c => c.ItemType == "Wallet" ).ItemID, 
+                    
                  },                            
-                 new Enrollment { 
-                    UserID = students.Single(s => s.LastName == "Alexander").ID,
-                    ItemID = courses.Single(c => c.Title == "Macroeconomics" ).ItemID, 
+                 new Email { 
+                    UserID = users.Single(s => s.LastName == "Kiely").ID,
+                    ItemID = items.Single(c => c.ItemType == "Clothing" ).ItemID, 
                     
                  },
-                 new Enrollment { 
-                     UserID = students.Single(s => s.LastName == "Alonso").ID,
-                    ItemID = courses.Single(c => c.Title == "Calculus" ).ItemID, 
-               
+                 new Email { 
+                     UserID = users.Single(s => s.LastName == "Lunde").ID,
+                    ItemID = items.Single(c => c.ItemType == "Jewellery" ).ItemID, 
+                     
                  },
-                 new Enrollment { 
-                    UserID = students.Single(s => s.LastName == "Alonso").ID,
-                    ItemID = courses.Single(c => c.Title == "Trigonometry" ).ItemID, 
-                    
-                 },
-                 new Enrollment {
-                   UserID = students.Single(s => s.LastName == "Alonso").ID,
-                   ItemID = courses.Single(c => c.Title == "Composition" ).ItemID, 
+                 new Email { 
+                     UserID = users.Single(s => s.LastName == "Bain").ID,
+                    ItemID = items.Single(c => c.ItemType == "Car Keys" ).ItemID, 
                    
                  },
-                 new Enrollment { 
-                    UserID = students.Single(s => s.LastName == "Anand").ID,
-                    ItemID = courses.Single(c => c.Title == "Chemistry" ).ItemID
-                 },
-                 new Enrollment { 
-                    UserID = students.Single(s => s.LastName == "Anand").ID,
-                    ItemID = courses.Single(c => c.Title == "Microeconomics").ItemID,
-                            
-                 },
-                new Enrollment { 
-                    UserID = students.Single(s => s.LastName == "Barzdukas").ID,
-                    ItemID = courses.Single(c => c.Title == "Chemistry").ItemID,
-                            
-                 },
-                 new Enrollment { 
-                    UserID = students.Single(s => s.LastName == "Li").ID,
-                    ItemID = courses.Single(c => c.Title == "Composition").ItemID,
-                            
-                 },
-                 new Enrollment { 
-                    UserID = students.Single(s => s.LastName == "Justice").ID,
-                    ItemID = courses.Single(c => c.Title == "Literature").ItemID,
-                            
-                 }
+                
             };
 
-            foreach (Enrollment e in enrollments)
+            foreach (Email e in emailadd)
             {
-                var enrollmentInDataBase = context.Enrollments.Where(
-                    s => s.User.ID == e.UserID &&
+                var emailInDataBase = context.EmailAdd.Where(
+                    s => 
+                        s.User.ID == e.UserID &&
                          s.Item.ItemID == e.Item.ItemID).SingleOrDefault();
-                if (enrollmentInDataBase == null)
+                if (emailInDataBase == null)
                 {
-                    context.Enrollments.Add(e);
+                    context.EmailAdd.Add(e);
                 }
             }
             context.SaveChanges();
         }
-        }
-    }
+     }
+ }
 

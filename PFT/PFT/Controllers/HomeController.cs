@@ -10,7 +10,7 @@ namespace PFT.Controllers
 {
     public class HomeController : Controller
     {
-        private LFContext db = new LFContext();
+       // private LFContext db = new LFContext();
         public ActionResult Index()
         {
             return View();
@@ -19,15 +19,8 @@ namespace PFT.Controllers
         public ActionResult About()
         {
             ViewBag.Message = "What this application is all about!";
-
-          /*  IQueryable<EnrollmentDateGroup> data = from item in db.Items
-                                                   group item by item.EnrollmentDate into dateGroup
-                                                   select new EnrollmentDateGroup()
-                                                   {
-                                                       EnrollmentDate = dateGroup.Key,
-                                                       ItemCount = dateGroup.Count()
-                                                   };*/
-            return View(/*data.ToList()*/);
+                      
+            return View();
         }
 
         public ActionResult Contact()
@@ -37,7 +30,7 @@ namespace PFT.Controllers
             return View();
         }
      
-          public ActionResult Form()
+         /* public ActionResult Form()
         {
             ViewBag.Message = "Please post here";
 
@@ -47,6 +40,6 @@ namespace PFT.Controllers
           {
               db.Dispose();
               base.Dispose(disposing);
-          }
+          }*/
     }
 }

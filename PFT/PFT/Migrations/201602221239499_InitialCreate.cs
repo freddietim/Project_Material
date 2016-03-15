@@ -8,14 +8,14 @@ namespace PFT.Migrations
         public override void Up()
         {
             CreateTable(
-                "dbo.Enrollment",
+                "dbo.Email",
                 c => new
                     {
-                        EnrollmentID = c.Int(nullable: false, identity: true),
+                        EmailID = c.Int(nullable: false, identity: true),
                         ItemID = c.Int(nullable: false),
                         UserID = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.EnrollmentID)
+                .PrimaryKey(t => t.EmailID)
                 .ForeignKey("dbo.Item", t => t.ItemID, cascadeDelete: true)
                 .ForeignKey("dbo.User", t => t.UserID, cascadeDelete: true)
                 .Index(t => t.ItemID)
@@ -26,10 +26,8 @@ namespace PFT.Migrations
                 c => new
                     {
                         ItemID = c.Int(nullable: false, identity: true),
-                        Title = c.String(),
-                        Description = c.String(),
-                        Location = c.String(),
-                        EnrollmentDate = c.DateTime(nullable: false),
+                        ItemType = c.String(),
+                        ItemDesc = c.String(),
                     })
                 .PrimaryKey(t => t.ItemID);
             
@@ -38,9 +36,9 @@ namespace PFT.Migrations
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
+                        FirstName = c.String(),
                         LastName = c.String(),
-                        FirstMidName = c.String(),
-                        EnrollmentDate = c.DateTime(nullable: false),
+                        EmailAddress = c.String(),
                     })
                 .PrimaryKey(t => t.ID);
             
@@ -48,13 +46,13 @@ namespace PFT.Migrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Enrollment", "UserID", "dbo.User");
-            DropForeignKey("dbo.Enrollment", "ItemID", "dbo.Item");
-            DropIndex("dbo.Enrollment", new[] { "UserID" });
-            DropIndex("dbo.Enrollment", new[] { "ItemID" });
+            DropForeignKey("dbo.Email", "UserID", "dbo.User");
+            DropForeignKey("dbo.Email", "ItemID", "dbo.Item");
+            DropIndex("dbo.Email", new[] { "UserID" });
+            DropIndex("dbo.Email", new[] { "ItemID" });
             DropTable("dbo.User");
             DropTable("dbo.Item");
-            DropTable("dbo.Enrollment");
+            DropTable("dbo.Email");
         }
     }
 }

@@ -11,11 +11,9 @@ namespace PFT.Models
 
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ItemID { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
-        public string Location { get; set; }
-        public DateTime EnrollmentDate { get; set; }
-
-        public virtual ICollection<Enrollment> Enrollments { get; set; }
+        public string ItemType { get; set; }
+        public string ItemDesc { get; set; }
+        
+        public virtual ICollection<Email> EmailAdd { get; set; }
     }
 }

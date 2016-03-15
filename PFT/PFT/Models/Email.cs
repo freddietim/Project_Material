@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.ComponentModel.DataAnnotations.Schema;
+//using System.ComponentModel.DataAnnotations.Schema;
 
 
 namespace PFT.Models
 {
-    public class Enrollment
+    public class Email
     {
-        public DateTime EnrollmentDate { get; set; }
+        public string EmailID { get; set; }
         public int UserID { get; set; }
         public int ItemID { get; set; }
         
