@@ -2,9 +2,9 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
         <h1><%: Title %>.</h1>
-        <h2>Wingtip Toys can help you find the perfect gift.</h2>
-        <p class="lead">We're all about transportation toys. You can order 
-                any of our toys today. Each toy listing has detailed 
-                information to help you choose the right toy.</p>
+        <h2>Lost & Found Web Application</h2>
+        <p class="lead">
+            Have you lost something? Found something? Reunite people with their belongings by posting about items you have lost or found. Be sure to leave a means of contact (an email address or phone number) and let the reunions begin!
+               </p>
     
 </asp:Content>

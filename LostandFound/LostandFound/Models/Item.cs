@@ -16,6 +16,7 @@ namespace LostandFound.Models
 
         [Required, StringLength(10000), Display(Name = "Product Description"), DataType(DataType.MultilineText)]
         public string Description { get; set; }
+       // public DateTime date_submitted { get; set; }
 
         public string ImagePath { get; set; }
 

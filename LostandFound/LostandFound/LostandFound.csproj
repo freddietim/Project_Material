@@ -230,8 +230,10 @@
     <Content Include="Images\images1\gift.jpg" />
     <Content Include="Images\images1\heads.jpg" />
     <Content Include="Images\images1\kids.jpg" />
+    <Content Include="Images\images1\lost.jpg" />
     <Content Include="Images\images1\mens.jpg" />
     <Content Include="Images\images1\pets.jpg" />
+    <Content Include="Images\images1\phones.jpg" />
     <Content Include="Images\images1\scary-zombie-shawn-costume.jpg" />
     <Content Include="Images\images1\shop2.jpg" />
     <Content Include="Images\images1\spider-costume-eyes_thumb.jpg" />

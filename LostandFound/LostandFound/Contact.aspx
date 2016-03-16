@@ -3,11 +3,15 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %>.</h2>
     <h3>Your contact page.</h3>
+    <p> If you have any queries please don't hesitate to contact us!</p>
+
     <address>
-        One Microsoft Way<br />
-        Redmond, WA 98052-6399<br />
+        312 IT Department<br />
+        NUI Galway<br />
+        Newcastle<br />
+        Galway<br />
         <abbr title="Phone">P:</abbr>
-        425.555.0100
+        091 525 566
     </address>
 
     <address>
