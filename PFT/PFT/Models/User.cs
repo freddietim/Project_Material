@@ -12,6 +12,6 @@ namespace PFT.Models
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
        
-        public virtual ICollection<Email> EmailAdd { get; set; }
+        public virtual ICollection<Item> Items { get; set; }
     }
 }

@@ -20,18 +20,18 @@ namespace PFT.DAL
                 new User{FirstName="Jen", LastName="Bain", EmailAddress="theBain@hotmail.com"},
             };
 
-            users.ForEach(s => context.Users.Add(s));
+            users.ForEach(u => context.Users.Add(u));
             context.SaveChanges();
             var items = new List<Item>
             {
-                new Item{ItemID=1010, ItemType="Phone", ItemDesc="Black iPhone 4S"},
-                new Item{ItemID=1020, ItemType="Wallet", ItemDesc="Browm leather wallet"},
-                new Item{ItemID=1030, ItemType="Clothing", ItemDesc="Red Fleece"},
-                new Item{ItemID=1040, ItemType="Jewellery", ItemDesc="Silver bracelet"},
-                new Item{ItemID=1050, ItemType="Car Keys", ItemDesc="Nissan car keys"},           
+                new Item{ItemID=1010, UserId= 1, ItemType="Phone", ItemDesc="Black iPhone 4S"},
+                new Item{ItemID=1020, UserId= 2, ItemType="Wallet", ItemDesc="Browm leather wallet"},
+                new Item{ItemID=1030, UserId= 3,ItemType="Clothing", ItemDesc="Red Fleece"},
+                new Item{ItemID=1040,UserId= 4, ItemType="Jewellery", ItemDesc="Silver bracelet"},
+                new Item{ItemID=1050,UserId= 5, ItemType="Car Keys", ItemDesc="Nissan car keys"},           
             };
 
-            items.ForEach(s => context.Items.Add(s));
+            items.ForEach(i => context.Items.Add(i));
             context.SaveChanges();
             var emailadd = new List<Email>
             {
@@ -41,7 +41,7 @@ namespace PFT.DAL
                 new Email{UserID=4, ItemID=1040},
                 new Email{UserID=5, ItemID=1050},            
             };
-            emailadd.ForEach(s => context.EmailAdd.Add(s));
+            emailadd.ForEach(e => context.EmailAdd.Add(e));
             context.SaveChanges();
         }
     }
