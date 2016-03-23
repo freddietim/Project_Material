@@ -20,8 +20,7 @@ namespace Project_FTF.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-            : base("LFContext", throwIfV1Schema: false)
+        public ApplicationDbContext() : base("LFContext", throwIfV1Schema: false)
         {
         }
 

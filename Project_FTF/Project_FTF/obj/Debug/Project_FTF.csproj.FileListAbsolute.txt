@@ -53,3 +53,6 @@
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.csprojResolveAssemblyReference.cache
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.dll
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.pdb
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.InitialCreate.resources
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.csproj.GenerateResource.Cache
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.InitialCreate1.resources
