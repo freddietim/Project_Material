@@ -177,6 +177,22 @@
     <Compile Include="Migrations\201603231301044_InitialCreate1.Designer.cs">
       <DependentUpon>201603231301044_InitialCreate1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603231637555_InitialCreate2.cs" />
+    <Compile Include="Migrations\201603231637555_InitialCreate2.Designer.cs">
+      <DependentUpon>201603231637555_InitialCreate2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603251039321_Dummy.cs" />
+    <Compile Include="Migrations\201603251039321_Dummy.Designer.cs">
+      <DependentUpon>201603251039321_Dummy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603251124281_Username.cs" />
+    <Compile Include="Migrations\201603251124281_Username.Designer.cs">
+      <DependentUpon>201603251124281_Username.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603251223449_Remove Username.cs" />
+    <Compile Include="Migrations\201603251223449_Remove Username.Designer.cs">
+      <DependentUpon>201603251223449_Remove Username.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -188,7 +204,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap-original.css" />
     <Content Include="Content\bootstrap-original.min.css" />
-    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site1.css" />
     <Content Include="favicon.ico" />
@@ -267,6 +283,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603231301044_InitialCreate1.resx">
       <DependentUpon>201603231301044_InitialCreate1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603231637555_InitialCreate2.resx">
+      <DependentUpon>201603231637555_InitialCreate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603251039321_Dummy.resx">
+      <DependentUpon>201603251039321_Dummy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603251124281_Username.resx">
+      <DependentUpon>201603251124281_Username.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603251223449_Remove Username.resx">
+      <DependentUpon>201603251223449_Remove Username.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

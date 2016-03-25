@@ -56,3 +56,7 @@
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.InitialCreate.resources
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.csproj.GenerateResource.Cache
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.InitialCreate1.resources
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.InitialCreate2.resources
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.Dummy.resources
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.Username.resources
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.RemoveUsername.resources

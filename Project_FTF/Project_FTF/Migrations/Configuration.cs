@@ -11,7 +11,7 @@ namespace Project_FTF.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "Project_FTF.DAL.LFContext";
         }
 

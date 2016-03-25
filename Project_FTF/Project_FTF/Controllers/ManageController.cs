@@ -10,7 +10,7 @@ using Project_FTF.Models;
 
 namespace Project_FTF.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Administrator")]
     public class ManageController : Controller
     {
         private ApplicationSignInManager _signInManager;
