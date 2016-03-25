@@ -193,6 +193,10 @@
     <Compile Include="Migrations\201603251223449_Remove Username.Designer.cs">
       <DependentUpon>201603251223449_Remove Username.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603251655123_Updates.cs" />
+    <Compile Include="Migrations\201603251655123_Updates.Designer.cs">
+      <DependentUpon>201603251655123_Updates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -295,6 +299,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603251223449_Remove Username.resx">
       <DependentUpon>201603251223449_Remove Username.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603251655123_Updates.resx">
+      <DependentUpon>201603251655123_Updates.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
