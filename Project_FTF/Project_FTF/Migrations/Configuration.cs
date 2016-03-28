@@ -6,6 +6,9 @@ namespace Project_FTF.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using Project_FTF.DAL;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Project_FTF.DAL.LFContext>
     {
@@ -13,6 +16,24 @@ namespace Project_FTF.Migrations
         {
             AutomaticMigrationsEnabled = true;
             ContextKey = "Project_FTF.DAL.LFContext";
+        }
+        bool AddUserAndRole(Project_FTF.Models.ApplicationDbContext context)
+        {
+            IdentityResult ir;
+            var rm = new RoleManager<IdentityRole>
+                (new RoleStore<IdentityRole>(context));
+            ir = rm.Create(new IdentityRole("canEdit"));
+            var um = new UserManager<ApplicationUser>(
+                 new UserStore<ApplicationUser>(context));
+            var user = new ApplicationUser()
+            {
+                UserName = "admin@lostandfound.com",
+            };
+            ir = um.Create(user, "P_assw0rd1");
+            if (ir.Succeeded == false)
+                return ir.Succeeded;
+            ir = um.AddToRole(user.Id, "canEdit");
+            return ir.Succeeded;
         }
 
         protected override void Seed(Project_FTF.DAL.LFContext context)
@@ -25,7 +46,18 @@ namespace Project_FTF.Migrations
                 new Item{Status = "Lost", FirstName = "Ulrich", LastName = "Lunde", EmailAddress = "ulrich@hotmail.com", ItemType = "Jewellery", ItemDesc="Silver tennis bracelet"},            
             };
             items.ForEach(s => context.Items.AddOrUpdate(p => p.EmailAddress, s));
-            context.SaveChanges();    
+            context.SaveChanges();
+
+            AddUserAndRole(context);
+
+            context.AspNetUsers.AddOrUpdate(p => p.EmailAddress);
+            context.SaveChanges;
+
+
+        }
+          
+
+           
                 
             //  This method will be called after migrating to the latest version.
 
@@ -41,4 +73,4 @@ namespace Project_FTF.Migrations
             //
         }
     }
-}
+
