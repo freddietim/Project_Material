@@ -6,7 +6,7 @@
     <title>@ViewBag.Title - Lost & Found</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+ 
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -25,12 +25,13 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Items", "Index", "Item")</li>
+                    <li>@Html.ActionLink("Users", "Index", "User")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
-    <!--div id="TitleContent" style="text-align: center">
+      <!--div id=" titlecontent" style="text-align: center">
         <a href="~/">
             <asp:Image ID="Image1" ImageUrl="~/Images/gift.jpg" BorderStyle="None" />
         </a>

@@ -17,7 +17,7 @@ namespace Project_FTF.Migrations
             AutomaticMigrationsEnabled = true;
             ContextKey = "Project_FTF.DAL.LFContext";
         }
-        bool AddUserAndRole(Project_FTF.Models.ApplicationDbContext context)
+        bool AddUserAndRole(Project_FTF.DAL.LFContext context)
         {
             IdentityResult ir;
             var rm = new RoleManager<IdentityRole>
@@ -49,11 +49,12 @@ namespace Project_FTF.Migrations
             context.SaveChanges();
 
             AddUserAndRole(context);
-
-            context.AspNetUsers.AddOrUpdate(p => p.EmailAddress);
-            context.SaveChanges;
-
-
+            context.Users.AddOrUpdate(p => p.UserName,
+                new User { UserName = "FreddieTim", EmailAddress = "freddie_@hotmail.com" },
+                new User { UserName = "ColmQ", EmailAddress = "colm_@hotmail.com" },
+                new User { UserName = "JDk", EmailAddress = "jd_@hotmail.com" }
+                );                         
+            
         }
           
 

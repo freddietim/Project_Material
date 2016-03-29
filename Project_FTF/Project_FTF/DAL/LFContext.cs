@@ -20,5 +20,7 @@ namespace Project_FTF.DAL
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
+
+        public System.Data.Entity.DbSet<Project_FTF.Models.User> Users { get; set; }
     }
 }
