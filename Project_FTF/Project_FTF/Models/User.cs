@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.Globalization;
+using Microsoft.AspNet.Identity;
 
 namespace Project_FTF.Models
 {

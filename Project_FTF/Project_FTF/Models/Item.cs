@@ -25,6 +25,8 @@ namespace Project_FTF.Models
         [Required(ErrorMessage = "Please provide a short description of the item")]
         [StringLength(1024)]
         public string ItemDesc { get; set; }
+        [Required(ErrorMessage = "Please specify a location")]
+        public string Location { get; set; }
 
         public string Abstract { get; set; }
        

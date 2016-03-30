@@ -63,7 +63,7 @@ namespace Project_FTF.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Status,FirstName,LastName,EmailAddress,ItemType,ItemDesc")] Item item)
+        public ActionResult Create([Bind(Include = "ID,Status,FirstName,LastName,EmailAddress,ItemType,ItemDesc, Location")] Item item)
         {
             if (ModelState.IsValid)
             {
@@ -95,7 +95,7 @@ namespace Project_FTF.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Status,FirstName,LastName,EmailAddress,ItemType,ItemDesc")] Item item)
+        public ActionResult Edit([Bind(Include = "ID,Status,FirstName,LastName,EmailAddress,ItemType,ItemDesc, Location")] Item item)
         {
             if (ModelState.IsValid)
             {

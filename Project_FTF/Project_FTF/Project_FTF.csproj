@@ -206,6 +206,10 @@
     <Compile Include="Migrations\201603291003599_Users update.Designer.cs">
       <DependentUpon>201603291003599_Users update.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603300958498_Location.cs" />
+    <Compile Include="Migrations\201603300958498_Location.Designer.cs">
+      <DependentUpon>201603300958498_Location.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -226,6 +230,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site-original.css" />
     <Content Include="googleMap.html" />
+    <Content Include="Images\lost.gif" />
     <Content Include="Images\spider-costume-eyes_thumb.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -273,7 +278,6 @@
     <Content Include="Views\Manage\Index.cshtml" />
     <Content Include="Views\Manage\ManageLogins.cshtml" />
     <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Item\Create.cshtml" />
@@ -324,6 +328,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603291003599_Users update.resx">
       <DependentUpon>201603291003599_Users update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603300958498_Location.resx">
+      <DependentUpon>201603300958498_Location.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
