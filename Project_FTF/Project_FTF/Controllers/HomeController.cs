@@ -26,7 +26,7 @@ namespace Project_FTF.Controllers
         [AllowAnonymous]
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contact us anytime!";
 
             return View();
         }    

@@ -5,6 +5,11 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Project_FTF.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.Owin;
+using System.Data.Entity;
+using Project_FTF.DAL;
 
 namespace Project_FTF
 {
@@ -16,6 +21,12 @@ namespace Project_FTF
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            
+        }
+            void Session_Start(object sender, EventArgs e) 
+            {
+            }
+
         }
     }
-}
+
