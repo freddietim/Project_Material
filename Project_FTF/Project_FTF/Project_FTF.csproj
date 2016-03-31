@@ -210,6 +210,10 @@
     <Compile Include="Migrations\201603300958498_Location.Designer.cs">
       <DependentUpon>201603300958498_Location.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603311130368_Add search and filtering to user page.cs" />
+    <Compile Include="Migrations\201603311130368_Add search and filtering to user page.Designer.cs">
+      <DependentUpon>201603311130368_Add search and filtering to user page.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -231,7 +235,7 @@
     <Content Include="Content\Site-original.css" />
     <Content Include="googleMap.html" />
     <Content Include="Images\lost.gif" />
-    <Content Include="Images\spider-costume-eyes_thumb.jpg" />
+    <Content Include="Images\lost.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -331,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603300958498_Location.resx">
       <DependentUpon>201603300958498_Location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603311130368_Add search and filtering to user page.resx">
+      <DependentUpon>201603311130368_Add search and filtering to user page.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -15,7 +15,7 @@ namespace Project_FTF.Controllers
         {
            return View();
         }
-
+        [AllowAnonymous]
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
@@ -23,7 +23,7 @@ namespace Project_FTF.Controllers
 
             return View();
         }
-
+        [AllowAnonymous]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";

@@ -27,9 +27,9 @@ namespace Project_FTF.Migrations
                  new UserStore<ApplicationUser>(context));
             var user = new ApplicationUser()
             {
-                UserName = "admin@lostandfound.com",
+                UserName = "ft@hotmail.com",
             };
-            ir = um.Create(user, "P_assw0rd1");
+            ir = um.Create(user, "Ftftft1!");
             if (ir.Succeeded == false)
                 return ir.Succeeded;
             ir = um.AddToRole(user.Id, "canEdit");

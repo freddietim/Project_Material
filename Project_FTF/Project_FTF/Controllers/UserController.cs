@@ -16,12 +16,29 @@ namespace Project_FTF.Controllers
         private LFContext db = new LFContext();
 
         // GET: User
-        public ActionResult Index()
+        public ActionResult Index(string sortOrder, string searchString)
         {
-            return View(db.Users.ToList());
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            var users = from s in db.Users
+                        select s;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                users = users.Where(s => s.UserName.Contains(searchString)); 
+            }
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    users = users.OrderByDescending(s => s.UserName);
+                    break;
+                default:
+                    users = users.OrderBy(s => s.UserName);
+                    break;
+            }
+            return View(users.ToList());
         }
 
         // GET: User/Details/5
+        
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,10 +54,10 @@ namespace Project_FTF.Controllers
         }
 
         // GET: User/Create
-        [Authorize(Roles = "canEdit")]
+        
         public ActionResult Create()
         {
-            return View(new User { UserName = "FT", EmailAddress = "ft@hotmail.com"});
+            return View(new User { UserName = "", EmailAddress = ""});
         }
 
         // POST: User/Create
@@ -48,7 +65,7 @@ namespace Project_FTF.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "canEdit")]
+        
         public ActionResult Create([Bind(Include = "UserID,UserName,EmailAddress")] User user)
         {
             if (ModelState.IsValid)
@@ -62,7 +79,7 @@ namespace Project_FTF.Controllers
         }
 
         // GET: User/Edit/5
-        [Authorize(Roles = "canEdit")]
+       [Authorize(Roles = "canEdit")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -82,6 +99,7 @@ namespace Project_FTF.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "canEdit")]
         public ActionResult Edit([Bind(Include = "UserID,UserName,EmailAddress")] User user)
         {
             if (ModelState.IsValid)
@@ -94,6 +112,7 @@ namespace Project_FTF.Controllers
         }
 
         // GET: User/Delete/5
+        [Authorize(Roles = "canEdit")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -111,6 +130,7 @@ namespace Project_FTF.Controllers
         // POST: User/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "canEdit")]
         public ActionResult DeleteConfirmed(int id)
         {
             User user = db.Users.Find(id);

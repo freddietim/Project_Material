@@ -76,6 +76,7 @@ namespace Project_FTF.Controllers
         }
 
         // GET: Item/Edit/5
+        [Authorize(Roles = "canEdit")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -95,6 +96,7 @@ namespace Project_FTF.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "canEdit")]
         public ActionResult Edit([Bind(Include = "ID,Status,FirstName,LastName,EmailAddress,ItemType,ItemDesc, Location")] Item item)
         {
             if (ModelState.IsValid)
@@ -107,6 +109,7 @@ namespace Project_FTF.Controllers
         }
 
         // GET: Item/Delete/5
+        [Authorize(Roles = "canEdit")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -124,6 +127,7 @@ namespace Project_FTF.Controllers
         // POST: Item/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "canEdit")]
         public ActionResult DeleteConfirmed(int id)
         {
             Item item = db.Items.Find(id);
