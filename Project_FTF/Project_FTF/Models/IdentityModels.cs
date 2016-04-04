@@ -22,9 +22,21 @@ namespace Project_FTF.Models
 
    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext() : base("LFContext", throwIfV1Schema: false)
+        public ApplicationDbContext() : base("Default Connection", throwIfV1Schema: false)
         {
         }
+       /* protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<IdentityUser>()
+                .ToTable("User");
+            modelBuilder.Entity<ApplicationUser>()
+                .ToTable("User");
+        
+        }*/
+        public DbSet<Item> Items { get; set; }
+        public System.Data.Entity.DbSet<Project_FTF.Models.User> Users { get; set; }
 
         public static ApplicationDbContext Create()
         {

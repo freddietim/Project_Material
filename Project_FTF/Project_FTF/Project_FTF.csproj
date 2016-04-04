@@ -214,6 +214,10 @@
     <Compile Include="Migrations\201603311130368_Add search and filtering to user page.Designer.cs">
       <DependentUpon>201603311130368_Add search and filtering to user page.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604041601130_AppliationDbContext instead of LFContext.cs" />
+    <Compile Include="Migrations\201604041601130_AppliationDbContext instead of LFContext.Designer.cs">
+      <DependentUpon>201604041601130_AppliationDbContext instead of LFContext.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -224,6 +228,14 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ApplcationDbContext.mdf" />
+    <Content Include="App_Data\ApplcationDbContext_log.ldf">
+      <DependentUpon>ApplcationDbContext.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\Default Connection.mdf" />
+    <Content Include="App_Data\Default Connection_log.ldf">
+      <DependentUpon>Default Connection.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-original.css" />
     <Content Include="Content\bootstrap-original.min.css" />
     <Content Include="Content\Site.css" />
@@ -295,9 +307,7 @@
     <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -338,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603311130368_Add search and filtering to user page.resx">
       <DependentUpon>201603311130368_Add search and filtering to user page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604041601130_AppliationDbContext instead of LFContext.resx">
+      <DependentUpon>201604041601130_AppliationDbContext instead of LFContext.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

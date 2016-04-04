@@ -9,11 +9,12 @@ using System.Web.Mvc;
 using Project_FTF.DAL;
 using Project_FTF.Models;
 
+
 namespace Project_FTF.Controllers
 {
     public class UserController : Controller
     {
-        private LFContext db = new LFContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: User
         public ActionResult Index(string sortOrder, string searchString)

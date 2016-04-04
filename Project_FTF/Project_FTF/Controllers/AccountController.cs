@@ -70,6 +70,7 @@ namespace Project_FTF.Controllers
         {
             if (!ModelState.IsValid)
             {
+
                 return View(model);
             }
 

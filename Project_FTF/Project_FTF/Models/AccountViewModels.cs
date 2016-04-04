@@ -54,6 +54,11 @@ namespace Project_FTF.Models
         public string EmailAddress { get; set; }
 
         [Required]
+        [Display(Name = "ID")]        
+        public string UserID { get; set; }
+
+
+        [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
         public string Password { get; set; }

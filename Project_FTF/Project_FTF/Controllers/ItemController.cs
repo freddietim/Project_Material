@@ -13,7 +13,7 @@ namespace Project_FTF.Controllers
 {
     public class ItemController : Controller
     {
-        private LFContext db = new LFContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Item
         public ActionResult Index(string sortOrder, string searchString)

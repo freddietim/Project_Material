@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity;
 
 namespace Project_FTF.Models
 {
-    public class User
+    public class User 
     {
         public int UserID { get; set; }
         public string UserName { get; set; }

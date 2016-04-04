@@ -7,9 +7,9 @@ using Project_FTF.Models;
 
 namespace Project_FTF.DAL
 {
-    public class LFInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<LFContext>
+    public class LFInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<ApplicationDbContext>
     {
-        protected override void Seed(LFContext context)
+        protected override void Seed(ApplicationDbContext context)
         {       
             var items = new List<Item>
             {

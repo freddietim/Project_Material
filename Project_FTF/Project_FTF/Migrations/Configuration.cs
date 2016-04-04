@@ -10,14 +10,14 @@ namespace Project_FTF.Migrations
     using Microsoft.AspNet.Identity.EntityFramework;
     using Project_FTF.DAL;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Project_FTF.DAL.LFContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Project_FTF.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "Project_FTF.DAL.LFContext";
+            ContextKey = "Project_FTF.Models.ApplicationDbContext";
         }
-        bool AddUserAndRole(Project_FTF.DAL.LFContext context)
+        bool AddUserAndRole(Project_FTF.Models.ApplicationDbContext context)
         {
             IdentityResult ir;
             var rm = new RoleManager<IdentityRole>
@@ -36,7 +36,7 @@ namespace Project_FTF.Migrations
             return ir.Succeeded;
         }
 
-        protected override void Seed(Project_FTF.DAL.LFContext context)
+        protected override void Seed(Project_FTF.Models.ApplicationDbContext context)
         {
             var items = new List<Item>
             {

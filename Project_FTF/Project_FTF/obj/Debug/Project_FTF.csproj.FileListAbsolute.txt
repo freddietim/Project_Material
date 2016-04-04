@@ -65,3 +65,4 @@
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.csprojResolveAssemblyReference.cache
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.Location.resources
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.Addsearchandfilteringtouserpage.resources
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.AppliationDbContextinsteadofLFContext.resources
