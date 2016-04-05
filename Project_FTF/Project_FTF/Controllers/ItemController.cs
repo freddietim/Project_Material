@@ -13,7 +13,7 @@ namespace Project_FTF.Controllers
 {
     public class ItemController : Controller
     {
-        private ApplicationDbContext db = new ApplicationDbContext();
+        private LFContext db = new LFContext();
 
         // GET: Item
         public ActionResult Index(string sortOrder, string searchString)
@@ -76,7 +76,7 @@ namespace Project_FTF.Controllers
         }
 
         // GET: Item/Edit/5
-        [Authorize(Roles = "canEdit")]
+        
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -96,7 +96,7 @@ namespace Project_FTF.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [Authorize(Roles = "canEdit")]
+        
         public ActionResult Edit([Bind(Include = "ID,Status,FirstName,LastName,EmailAddress,ItemType,ItemDesc, Location")] Item item)
         {
             if (ModelState.IsValid)

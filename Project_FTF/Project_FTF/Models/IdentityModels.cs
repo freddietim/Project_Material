@@ -20,9 +20,10 @@ namespace Project_FTF.Models
         }
     }
 
-   public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+   /*public class LFContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext() : base("Default Connection", throwIfV1Schema: false)
+       public LFContext()
+           : base("LFContext", throwIfV1Schema: false)
         {
         }
        /* protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -34,13 +35,13 @@ namespace Project_FTF.Models
             modelBuilder.Entity<ApplicationUser>()
                 .ToTable("User");
         
-        }*/
+        }
         public DbSet<Item> Items { get; set; }
         public System.Data.Entity.DbSet<Project_FTF.Models.User> Users { get; set; }
 
-        public static ApplicationDbContext Create()
+        public static LFContext Create()
         {
-            return new ApplicationDbContext();
+            return new LFContext();
         }
-    }
+    }*/
 }

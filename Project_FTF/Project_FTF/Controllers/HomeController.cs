@@ -18,7 +18,7 @@ namespace Project_FTF.Controllers
         [AllowAnonymous]
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "What we are about.";
             
 
             return View();

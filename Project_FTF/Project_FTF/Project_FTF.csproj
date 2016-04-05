@@ -164,7 +164,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="DAL\LFContext.cs" />
     <Compile Include="DAL\LFInitializer.cs" />
     <Compile Include="Global.asax.cs">
@@ -218,24 +218,28 @@
     <Compile Include="Migrations\201604041601130_AppliationDbContext instead of LFContext.Designer.cs">
       <DependentUpon>201604041601130_AppliationDbContext instead of LFContext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604051015410_Allow users to edit %28remove autorisation clause%29.cs" />
+    <Compile Include="Migrations\201604051015410_Allow users to edit %28remove autorisation clause%29.Designer.cs">
+      <DependentUpon>201604051015410_Allow users to edit %28remove autorisation clause%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604051128195_Changed applicationDbContext to LFContext everywhere.cs" />
+    <Compile Include="Migrations\201604051128195_Changed applicationDbContext to LFContext everywhere.Designer.cs">
+      <DependentUpon>201604051128195_Changed applicationDbContext to LFContext everywhere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604051206462_Changed User to Contact.cs" />
+    <Compile Include="Migrations\201604051206462_Changed User to Contact.Designer.cs">
+      <DependentUpon>201604051206462_Changed User to Contact.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Item.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Contact.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\ApplcationDbContext.mdf" />
-    <Content Include="App_Data\ApplcationDbContext_log.ldf">
-      <DependentUpon>ApplcationDbContext.mdf</DependentUpon>
-    </Content>
-    <Content Include="App_Data\Default Connection.mdf" />
-    <Content Include="App_Data\Default Connection_log.ldf">
-      <DependentUpon>Default Connection.mdf</DependentUpon>
-    </Content>
     <Content Include="Content\bootstrap-original.css" />
     <Content Include="Content\bootstrap-original.min.css" />
     <Content Include="Content\Site.css" />
@@ -301,13 +305,15 @@
     <Content Include="Views\Item\Details.cshtml" />
     <Content Include="Views\Item\Edit.cshtml" />
     <Content Include="Views\Item\Index.cshtml" />
-    <Content Include="Views\User\Create.cshtml" />
-    <Content Include="Views\User\Delete.cshtml" />
-    <Content Include="Views\User\Details.cshtml" />
-    <Content Include="Views\User\Edit.cshtml" />
-    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Contact\Create.cshtml" />
+    <Content Include="Views\Contact\Delete.cshtml" />
+    <Content Include="Views\Contact\Details.cshtml" />
+    <Content Include="Views\Contact\Edit.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -351,6 +357,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604041601130_AppliationDbContext instead of LFContext.resx">
       <DependentUpon>201604041601130_AppliationDbContext instead of LFContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604051015410_Allow users to edit %28remove autorisation clause%29.resx">
+      <DependentUpon>201604051015410_Allow users to edit %28remove autorisation clause%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604051128195_Changed applicationDbContext to LFContext everywhere.resx">
+      <DependentUpon>201604051128195_Changed applicationDbContext to LFContext everywhere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604051206462_Changed User to Contact.resx">
+      <DependentUpon>201604051206462_Changed User to Contact.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

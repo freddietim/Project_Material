@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,7 +14,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Project_FTF.DAL
 {
-    public class LFContext :  DbContext
+    public class LFContext :  IdentityDbContext<ApplicationUser>
     {
         public LFContext() : base("LFContext")
         {
@@ -28,11 +28,12 @@ namespace Project_FTF.DAL
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
-        public System.Data.Entity.DbSet<Project_FTF.Models.User> Users { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
 
         public static LFContext Create()
         {
             return new LFContext();
         }
     }
-}*/
+   
+}
