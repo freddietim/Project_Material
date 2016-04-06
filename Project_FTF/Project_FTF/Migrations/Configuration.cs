@@ -45,14 +45,14 @@ namespace Project_FTF.Migrations
                 new Item{Status = "Found", FirstName = "JD", LastName = "Kiely", EmailAddress = "jd@hotmail.com", ItemType = "Keys", ItemDesc="Volkswagon car keys", Location = "Kingfisher Gym, NUI Galway, Newcastle, Galway"},
                 new Item{Status = "Lost", FirstName = "Ulrich", LastName = "Lunde", EmailAddress = "ulrich@hotmail.com", ItemType = "Jewellery", ItemDesc="Silver tennis bracelet", Location = "Smokeys, NUI Galway, Newcastle, Galway"},            
             };
-            items.ForEach(s => context.Items.AddOrUpdate(p => p.EmailAddress, s));    
-          
-            AddUserAndRole(context);
+            items.ForEach(s => context.Items.AddOrUpdate(p => p.EmailAddress, s));
+
+            AddUserAndRole(context);   
             context.Contacts.AddOrUpdate(p => p.UserName,
                 new Contact { UserName = "FreddieTim", EmailAddress = "freddie_@hotmail.com" },
                 new Contact { UserName = "ColmQ", EmailAddress = "colm_@hotmail.com" },
                 new Contact { UserName = "JDk", EmailAddress = "jd_@hotmail.com" }
-                );                         
+                );                        
             
         }                
       }

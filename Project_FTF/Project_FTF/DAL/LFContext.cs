@@ -19,8 +19,9 @@ namespace Project_FTF.DAL
         public LFContext() : base("LFContext")
         {
         }
-        
-        public DbSet<Item> Items { get; set; }        
+
+        public DbSet<Item> Items { get; set; }               
+        public DbSet<Contact> Contacts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -28,12 +29,12 @@ namespace Project_FTF.DAL
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
-        public DbSet<Contact> Contacts { get; set; }
-
         public static LFContext Create()
         {
             return new LFContext();
         }
+
+     
     }
    
 }

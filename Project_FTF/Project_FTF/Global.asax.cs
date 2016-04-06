@@ -23,9 +23,10 @@ namespace Project_FTF
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             
         }
-            void Session_Start(object sender, EventArgs e) 
+            /*void OnSessionStart() 
             {
-            }
+                HttpContext.Current.Session.Add("_MySessionObject", new MySessionObject());
+            }*/
 
         }
     }
