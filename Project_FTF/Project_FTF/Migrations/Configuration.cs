@@ -46,13 +46,15 @@ namespace Project_FTF.Migrations
                 new Item{Status = "Lost", FirstName = "Ulrich", LastName = "Lunde", EmailAddress = "ulrich@hotmail.com", ItemType = "Jewellery", ItemDesc="Silver tennis bracelet", Location = "Smokeys, NUI Galway, Newcastle, Galway"},            
             };
             items.ForEach(s => context.Items.AddOrUpdate(p => p.EmailAddress, s));
-
+            context.SaveChanges();
+            
             AddUserAndRole(context);   
-            context.Contacts.AddOrUpdate(p => p.UserName,
+            context.Contacts.AddOrUpdate(u => u.UserName,
                 new Contact { UserName = "FreddieTim", EmailAddress = "freddie_@hotmail.com" },
                 new Contact { UserName = "ColmQ", EmailAddress = "colm_@hotmail.com" },
                 new Contact { UserName = "JDk", EmailAddress = "jd_@hotmail.com" }
-                );                        
+                );
+            
             
         }                
       }

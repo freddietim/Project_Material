@@ -100,6 +100,7 @@ namespace Project_FTF.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
         
         public ActionResult Edit([Bind(Include = "UserID,UserName,EmailAddress")] Contact contact)
         {
@@ -107,6 +108,7 @@ namespace Project_FTF.Controllers
             {
                 db.Entry(contact).State = EntityState.Modified;
                 db.SaveChanges();
+                               
                 return RedirectToAction("Index");
             }
             return View(contact);

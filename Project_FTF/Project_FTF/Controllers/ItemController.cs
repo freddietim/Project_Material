@@ -9,7 +9,6 @@ using System.Web.Mvc;
 using Project_FTF.DAL;
 using Project_FTF.Models;
 
-
 namespace Project_FTF.Controllers
 {
     public class ItemController : Controller
@@ -104,7 +103,7 @@ namespace Project_FTF.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(item);
+            return View();
         }
 
         // GET: Item/Delete/5

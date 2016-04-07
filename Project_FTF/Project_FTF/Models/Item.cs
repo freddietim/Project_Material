@@ -13,7 +13,7 @@ namespace Project_FTF.Models
     {
         [ScaffoldColumn(false)]
         public int ID { get; set; }
-        [Required]
+        [Required]        
         public string Status { get; set; }
         [Required(ErrorMessage = "Please enter your name")]
         public string FirstName { get; set; }
