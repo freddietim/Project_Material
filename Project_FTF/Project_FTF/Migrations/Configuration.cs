@@ -38,6 +38,7 @@ namespace Project_FTF.Migrations
 
         protected override void Seed(Project_FTF.DAL.LFContext context)
         {
+            AddUserAndRole(context);   
             var items = new List<Item>
             {
                 new Item{Status = "Lost", FirstName = "Freddie", LastName = "Timmins", EmailAddress = "freddie@hotmail.com", ItemType = "Phone", ItemDesc="Black iPhone", Location = "College Bar, NUI Galway, Newcastle, Galway"},
@@ -47,8 +48,7 @@ namespace Project_FTF.Migrations
             };
             items.ForEach(s => context.Items.AddOrUpdate(p => p.EmailAddress, s));
             context.SaveChanges();
-            
-            AddUserAndRole(context);   
+                        
             context.Contacts.AddOrUpdate(u => u.UserName,
                 new Contact { UserName = "FreddieTim", EmailAddress = "freddie_@hotmail.com" },
                 new Contact { UserName = "ColmQ", EmailAddress = "colm_@hotmail.com" },

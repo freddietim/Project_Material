@@ -19,7 +19,10 @@ namespace Project_FTF.DAL
         public LFContext() : base("LFContext")
         {
         }
-
+        public static LFContext Create()
+        {
+            return new LFContext();
+        }
         public DbSet<Item> Items { get; set; }               
         public DbSet<Contact> Contacts { get; set; }
 
@@ -27,14 +30,6 @@ namespace Project_FTF.DAL
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        }
-
-        public static LFContext Create()
-        {
-            return new LFContext();
-        }
-
-     
-    }
-   
+       }            
+    }   
 }

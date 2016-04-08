@@ -62,12 +62,11 @@ namespace Project_FTF.Controllers
         }
 
         // POST: User/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+    
         [HttpPost]
         [ValidateAntiForgeryToken]
         
-        public ActionResult Create([Bind(Include = "UserID,UserName,EmailAddress")] Contact contact)
+        public ActionResult Create([Bind(Include = "ContactID,UserName,EmailAddress")] Contact contact)
         {
             if (ModelState.IsValid)
             {
@@ -96,19 +95,15 @@ namespace Project_FTF.Controllers
         }
 
         // POST: User/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-
         
-        public ActionResult Edit([Bind(Include = "UserID,UserName,EmailAddress")] Contact contact)
+        [HttpPost]
+        [ValidateAntiForgeryToken]        
+        public ActionResult Edit([Bind(Include = "ContactID,UserName,EmailAddress")] Contact contact)
         {
             if (ModelState.IsValid)
-            {
+            {               
                 db.Entry(contact).State = EntityState.Modified;
-                db.SaveChanges();
-                               
+                db.SaveChanges();                               
                 return RedirectToAction("Index");
             }
             return View(contact);

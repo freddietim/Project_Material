@@ -11,7 +11,7 @@ namespace Project_FTF.Models
     [Bind(Exclude = "ID")]
     public class Item
     {
-        [ScaffoldColumn(false)]
+       // [ScaffoldColumn(false)]
         public int ID { get; set; }
         [Required]        
         public string Status { get; set; }

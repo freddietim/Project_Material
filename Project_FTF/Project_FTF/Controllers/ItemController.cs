@@ -35,7 +35,7 @@ namespace Project_FTF.Controllers
                     break;
             }
             return View(items.ToList());
-        }
+        }         
 
         // GET: Item/Details/5
         public ActionResult Details(int? id)
@@ -59,8 +59,7 @@ namespace Project_FTF.Controllers
         }
 
         // POST: Item/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Status,FirstName,LastName,EmailAddress,ItemType,ItemDesc, Location")] Item item)
@@ -76,7 +75,7 @@ namespace Project_FTF.Controllers
         }
 
         // GET: Item/Edit/5
-        
+        [Authorize(Roles = "canEdit")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -94,16 +93,17 @@ namespace Project_FTF.Controllers
         // POST: Item/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        
+        [Authorize(Roles = "canEdit")]
         public ActionResult Edit([Bind(Include = "ID,Status,FirstName,LastName,EmailAddress,ItemType,ItemDesc,Location")] Item item)
         {
             if (ModelState.IsValid)
             {
+                item.ID = Int32.Parse(Request["ID"]);
                 db.Entry(item).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View();
+            return View(item);
         }
 
         // GET: Item/Delete/5
