@@ -11,6 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using System.Data.Entity;
 using Project_FTF.DAL;
 
+
 namespace Project_FTF
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -23,9 +24,11 @@ namespace Project_FTF
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             
         }
-            /*void OnSessionStart() 
+     
+
+      /*  public static MySessionObject GetMySessonObject(this HttpContext current)
             {
-                HttpContext.Current.Session.Add("_MySessionObject", new MySessionObject());
+                return current != null ? (MySessionObject)current["_MySessionObject"] : null;
             }*/
 
         }

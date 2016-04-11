@@ -5,13 +5,15 @@ using System.Web;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 using System.Web.Mvc;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace Project_FTF.Models
 {
     [Bind(Exclude = "ID")]
     public class Item
     {
-       // [ScaffoldColumn(false)]
+        [ScaffoldColumn(false)]
         public int ID { get; set; }
         [Required]        
         public string Status { get; set; }
@@ -27,6 +29,7 @@ namespace Project_FTF.Models
         public string ItemDesc { get; set; }
         [Required(ErrorMessage = "Please specify a location")]
         public string Location { get; set; }
+        
 
         public string Abstract { get; set; }
        

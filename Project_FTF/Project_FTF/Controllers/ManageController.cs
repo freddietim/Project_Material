@@ -101,7 +101,7 @@ namespace Project_FTF.Controllers
 
           
         //
-        // POST: /Manage/EnableTwoFactorAuthentication
+   /*     // POST: /Manage/EnableTwoFactorAuthentication
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> EnableTwoFactorAuthentication()
@@ -130,7 +130,7 @@ namespace Project_FTF.Controllers
             return RedirectToAction("Index", "Manage");
         }
 
-        //
+        //*/
        
 
         //

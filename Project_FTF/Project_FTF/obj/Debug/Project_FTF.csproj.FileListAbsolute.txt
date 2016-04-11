@@ -62,7 +62,6 @@
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.Updates.resources
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.Users.resources
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.Usersupdate.resources
-\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.csprojResolveAssemblyReference.cache
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.Location.resources
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.Addsearchandfilteringtouserpage.resources
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.AppliationDbContextinsteadofLFContext.resources
@@ -70,3 +69,6 @@
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.ChangedapplicationDbContexttoLFContexteverywhere.resources
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.ChangedUsertoContact.resources
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.updates2.resources
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.modelchanges.resources
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.Contextclasschangetoaccommodateforeignkey.resources
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.csprojResolveAssemblyReference.cache

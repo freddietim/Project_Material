@@ -27,13 +27,14 @@ namespace Project_FTF.Migrations
                  new UserStore<ApplicationUser>(context));
             var user = new ApplicationUser()
             {
-                UserName = "admin@lostandfound.com",
+                UserName = "admin1@lostandfound.com",
             };
-            ir = um.Create(user, "Admin1!");
+            ir = um.Create(user, "Admin1!!");
             if (ir.Succeeded == false)
                 return ir.Succeeded;
             ir = um.AddToRole(user.Id, "canEdit");
             return ir.Succeeded;
+            
         }
 
         protected override void Seed(Project_FTF.DAL.LFContext context)
@@ -48,7 +49,7 @@ namespace Project_FTF.Migrations
             };
             items.ForEach(s => context.Items.AddOrUpdate(p => p.EmailAddress, s));
             context.SaveChanges();
-                        
+            AddUserAndRole(context);             
             context.Contacts.AddOrUpdate(u => u.UserName,
                 new Contact { UserName = "FreddieTim", EmailAddress = "freddie_@hotmail.com" },
                 new Contact { UserName = "ColmQ", EmailAddress = "colm_@hotmail.com" },
