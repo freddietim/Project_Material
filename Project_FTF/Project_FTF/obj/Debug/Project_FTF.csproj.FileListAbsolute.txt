@@ -72,3 +72,7 @@
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.modelchanges.resources
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.Contextclasschangetoaccommodateforeignkey.resources
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.csprojResolveAssemblyReference.cache
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\bin\Chart.Mvc.dll
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\bin\Chart.Mvc.pdb
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\bin\Chart.Mvc.xml
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.ftf.resources

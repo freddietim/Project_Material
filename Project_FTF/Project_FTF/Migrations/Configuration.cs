@@ -14,9 +14,10 @@ namespace Project_FTF.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
             ContextKey = "Project_FTF.DAL.LFContext";
         }
+
         bool AddUserAndRole(Project_FTF.DAL.LFContext context)
         {
             IdentityResult ir;
@@ -27,9 +28,9 @@ namespace Project_FTF.Migrations
                  new UserStore<ApplicationUser>(context));
             var user = new ApplicationUser()
             {
-                UserName = "admin1@lostandfound.com",
+                UserName = "admins@lostandfound.com",
             };
-            ir = um.Create(user, "Admin1!!");
+            ir = um.Create(user, "Admins1!");
             if (ir.Succeeded == false)
                 return ir.Succeeded;
             ir = um.AddToRole(user.Id, "canEdit");
@@ -39,7 +40,7 @@ namespace Project_FTF.Migrations
 
         protected override void Seed(Project_FTF.DAL.LFContext context)
         {
-            AddUserAndRole(context);   
+            AddUserAndRole(context);
             var items = new List<Item>
             {
                 new Item{Status = "Lost", FirstName = "Freddie", LastName = "Timmins", EmailAddress = "freddie@hotmail.com", ItemType = "Phone", ItemDesc="Black iPhone", Location = "College Bar, NUI Galway, Newcastle, Galway"},
@@ -49,7 +50,7 @@ namespace Project_FTF.Migrations
             };
             items.ForEach(s => context.Items.AddOrUpdate(p => p.EmailAddress, s));
             context.SaveChanges();
-            AddUserAndRole(context);             
+                       
             context.Contacts.AddOrUpdate(u => u.UserName,
                 new Contact { UserName = "FreddieTim", EmailAddress = "freddie_@hotmail.com" },
                 new Contact { UserName = "ColmQ", EmailAddress = "colm_@hotmail.com" },

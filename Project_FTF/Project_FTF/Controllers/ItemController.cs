@@ -75,7 +75,7 @@ namespace Project_FTF.Controllers
         }
 
         // GET: Item/Edit/5
-      //  [Authorize(Roles = "canEdit")]
+        [Authorize(Roles = "canEdit")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -93,7 +93,7 @@ namespace Project_FTF.Controllers
         // POST: Item/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-     //   [Authorize(Roles = "canEdit")]
+        [Authorize(Roles = "canEdit")]
         public ActionResult Edit([Bind(Include = "ID,Status,FirstName,LastName,EmailAddress,ItemType,ItemDesc,Location")] Item item)
         {
             if (ModelState.IsValid)
