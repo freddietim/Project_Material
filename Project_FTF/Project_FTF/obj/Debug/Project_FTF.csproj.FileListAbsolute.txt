@@ -77,3 +77,5 @@
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\bin\Chart.Mvc.xml
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.ftf.resources
 \\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.additionstoseedmethod.resources
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.removedphonenofromaspnetusers.resources
+\\fs2\11341061\Desktop\Project\Project_FTF\Project_FTF\obj\Debug\Project_FTF.Migrations.removenav.resources

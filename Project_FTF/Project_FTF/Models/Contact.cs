@@ -13,6 +13,7 @@ namespace Project_FTF.Models
         public int ContactID { get; set; }
         public string UserName { get; set; }
         [DataType(DataType.EmailAddress)]
-        public string EmailAddress { get; set; }
+        public string EmailAddress { get; set; }       
+      
     }
 }

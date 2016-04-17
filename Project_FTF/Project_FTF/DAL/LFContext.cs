@@ -5,7 +5,6 @@ using System.Web;
 using System.Data.Entity;
 using Project_FTF.Models;
 using System.Data.Entity.ModelConfiguration.Conventions;
-
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <title>Graph</title>
+    <script language="JavaScript">
+       
+    function chart() {
+        chart1 = new Highcharts.Chart({
+            chart: {
+                zoomType: 'x',
+                alignTicks: false,
+                renderTo: 'container'
+            },
+            title: {
+                text: 'Locations of Items',
+                x: -20 //center
+            },
+            subtitle: {
+                text: 'Number of items lost and found in specific locations.',
+                x: -20
+            },
+            xAxis: {
+                categories: ['KingFisher, NUIG', 'College Bar,NUIG', 'Library, NUIG', 'Smokeys, NUIG', 'Shop St, Galway', 'Dangan Sports Ground',
+                    'Middle Street, Galway', 'IT Department, NIUG', 'Salthill, Galway', 'Eyre Square, Galway', 'Barna, Galway', 'Cairnes Building, NUIG']
+            },
+            yAxis: {
+                title: {
+                    text: 'No of Items'
+                },
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: ''
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle',
+                borderWidth: 0
+            },
+            series: [{
+                name: 'Phone',
+                data: [7.0, 8.0, 10.0, 14.0, 18.0, 21.0, 25.0, 26.0, 23.0, 18.0, 13.0, 9.0]
+            }, {
+                name: 'Wallet',
+                data: [1.0, 5.0, 11.0, 17.0, 22.0, 24.0, 24.0, 20.0, 14.0, 8.0, 2.0]
+            }, {
+                name: 'Sports Equipment',
+                data: [0.0, 3.0, 8.0, 13.0, 17.0, 18.0, 17.0, 14.0, 9.0, 3.0, 1.0]
+            }, {
+                name: 'Jewellery',
+                data: [3.0, 4.0, 5.0, 8.0, 11.0, 15.0, 17.0, 16.0, 14.0, 10.0, 6.0, 4.0]
+            }, {
+                name: 'Keys',
+                data: [1.0, 5.0, 11.0, 17.0, 22.0, 24.0, 23.0, 20., 14.0, 8.0, 2.0]
+            }, {
+                name: 'Clothing',
+                data: [0.0, 5.0, 11.0, 17.0, 22.0, 24.0, 23.0, 20.0, 14.0, 8.0, 2.0]
+            }, ]
+        });
+    }
+
+    </script>
+
+</head>
+<body onload="chart();">
+
+    <div id="container" > </div>
+</body>
+</html>

@@ -30,7 +30,6 @@ namespace Project_FTF.Models
         [Required(ErrorMessage = "Please specify a location")]
         public string Location { get; set; }
 
-        public string Abstract { get; set; }
-       
+        public string Abstract { get; set; }       
     }
 }

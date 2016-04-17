@@ -165,6 +165,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\GraphController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -254,6 +255,14 @@
     <Compile Include="Migrations\201604141013432_additions to seed method.Designer.cs">
       <DependentUpon>201604141013432_additions to seed method.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604161726019_removed phone no from aspnetusers.cs" />
+    <Compile Include="Migrations\201604161726019_removed phone no from aspnetusers.Designer.cs">
+      <DependentUpon>201604161726019_removed phone no from aspnetusers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604171358073_remove nav.cs" />
+    <Compile Include="Migrations\201604171358073_remove nav.Designer.cs">
+      <DependentUpon>201604171358073_remove nav.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -274,6 +283,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site-original.css" />
     <Content Include="googleMap.html" />
+    <Content Include="Graph.html" />
     <Content Include="Images\lost.gif" />
     <Content Include="Images\lost.jpg" />
     <Content Include="Scripts\bootstrap.js" />
@@ -342,6 +352,7 @@
     <Content Include="Views\Contact\Details.cshtml" />
     <Content Include="Views\Contact\Edit.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Graph\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -415,6 +426,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604141013432_additions to seed method.resx">
       <DependentUpon>201604141013432_additions to seed method.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604161726019_removed phone no from aspnetusers.resx">
+      <DependentUpon>201604161726019_removed phone no from aspnetusers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604171358073_remove nav.resx">
+      <DependentUpon>201604171358073_remove nav.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
